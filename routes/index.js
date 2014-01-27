@@ -52,9 +52,33 @@ module.exports = function(app) {
 
     //从虎扑获取每日比赛结果 并且存储到db
     app.get("/getdata", function(req, res){
-        getAndSave.init(function(data){
+        getAndSave.init(50, function(data){
             res.render("nba",{
-                title: "获取数据-NBA",
+                title: "抓取以往数据-NBA",
+                content: data
+            })
+        });
+    });
+    app.get("/getdata?yesterday", function(req, res){
+        getAndSave.init(1, function(data){
+            res.render("nba",{
+                title: "获取前一天数据-NBA",
+                content: data
+            })
+        });
+    });
+    app.get("/getdata?today", function(req, res){
+        getAndSave.init(1, function(data){
+            res.render("nba",{
+                title: "获取前一天数据-NBA",
+                content: data
+            })
+        });
+    });
+    app.get("/getdata?tomorrow", function(req, res){
+        getAndSave.init(1, function(data){
+            res.render("nba",{
+                title: "获取前一天数据-NBA",
                 content: data
             })
         });

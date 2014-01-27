@@ -8,8 +8,16 @@
     </div>
     <div class="form-group">
     <select class="form-control" name="not_home" id="">
-        <option value="0" >主场</option>
-        <option value="1">客场</option>
+        <%var options = [{"value":0,"text":"主场"},{"value":1,"text":"客场"}]%>
+        <%for(var i=0;i<options.length;i++){%>
+            <%var selected = ""%>
+            <%if(query.not_home == options[i].value){%>
+            <%selected = "selected"%>
+            <%}%>
+        <option value="<%-options[i].value%>" <%-selected%>><%-options[i].text%></option>
+        <%}%>
+        <!--<option value="0" '<%(parseInt(query.not_home,10)==0)?"selected=true":""%>'>主场</option>-->
+        <!--<option value="1" '<%(parseInt(query.not_home,10)==1)?"selected=true":""%>'>客场</option>-->
     </select>
     </div>
     <div class="form-group">

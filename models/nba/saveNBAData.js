@@ -4,7 +4,8 @@ var mongodb = require("../db");
 var moment = require("moment");
 
 var getAndSave = {
-    init: function(callback){
+    init: function(dayLimit, callback){
+        this.dayLimit = dayLimit || 2;
         this.callback = callback;
         this.dayIndex = -1;
         this.getData();
@@ -74,14 +75,14 @@ var getAndSave = {
     },
     saveDone: function(){
         this.dayIndex --;
-        if(this.dayIndex > -51){
+        if(this.dayIndex > -this.dayLimit){
             this.getData();
         }
     }
 };
 
-var init = function(callback){
-    getAndSave.init(callback);
+var init = function(dayLimit, callback){
+    getAndSave.init(dayLimit, callback);
 };
 
 module.exports.init = init;
