@@ -1,10 +1,10 @@
 var http = require("http");
 var cheerio = require("cheerio");
 var mongodb = require("../db");
+var moment = require("moment");
 
 var getAndSave = {
-    init: function(date, callback){
-        this.date = date;
+    init: function(callback){
         this.callback = callback;
         this.dayIndex = -1;
         this.getData();
@@ -21,8 +21,6 @@ var getAndSave = {
                 var list = [];
                 var json = JSON.parse(source);
                 var $ = cheerio.load(json.html);
-                //获取时间
-                var date = $("span.curTime").html();
                 //获取比分
                 $(".bifen").each(function(){
                     list.push($(this).find("a").attr("title"));
@@ -39,13 +37,8 @@ var getAndSave = {
             });
     },
     formatData: function(data){
-        var _date = new Date();
-        var today = {
-            y: _date.getFullYear(),
-            m: _date.getMonth() + 1,
-            d: _date.getDate()
-        };
-        data.date = today.y + "-" + (today.m>9?today:("0"+today.m)) + "-" + ((today.d+this.dayIndex)>9?(today.d+this.dayIndex):("0"+today.d+this.dayIndex));
+        var now = moment().add('days', this.dayIndex);
+        data.date = now.format("YYYY-MM-DD");
         data.result = [];
 
         for(var index=0; index<data.list.length; index++){
@@ -68,12 +61,12 @@ var getAndSave = {
         mongodb.open(function(err,db){
             db.collection("scores",function(err, collection){
                 //collection.update({"date":data.date},{$set: {"date":data.date, "results":data.result}},function(err){
-                collection.update({"date":data.date},{"date":data.date, "results":data.result},{upsert:true},function(err){
+                collection.update({"date":data.date},{"date":data.date, "result":data.result},{upsert:true},function(err){
                     if(err){
                         console.log(err);
                     }
                     mongodb.close();
-                    //me.saveDone();
+                    me.saveDone();
                     me.callback && me.callback(data);
                 });
             })
@@ -81,17 +74,14 @@ var getAndSave = {
     },
     saveDone: function(){
         this.dayIndex --;
-        if(this.dayIndex > -10){
+        if(this.dayIndex > -51){
             this.getData();
         }
-    },
-    getFromDb: function(){
-
     }
 };
 
-var init = function(date, callback){
-    getAndSave.init(date, callback);
-}
+var init = function(callback){
+    getAndSave.init(callback);
+};
 
 module.exports.init = init;

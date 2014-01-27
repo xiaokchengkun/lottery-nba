@@ -52,7 +52,7 @@ module.exports = function(app) {
 
     //从虎扑获取每日比赛结果 并且存储到db
     app.get("/getdata", function(req, res){
-        getAndSave.init("",function(data){
+        getAndSave.init(function(data){
             res.render("nba",{
                 title: "获取数据-NBA",
                 content: data
@@ -62,7 +62,7 @@ module.exports = function(app) {
     //从db中获取以往比赛结果
     app.get("/checkdata", function(req, res){
         checkData(req, function(data){
-            res.render("nba",{
+            res.render("check",{
                 title: "查看以往数据-NBA",
                 content: data
             })

@@ -1,15 +1,63 @@
 <%- include header %>
 
-    <h2><%-content.date%></h2>
+<%var query = content.query || {}%>
 
-    <%var result = content.result%>
-    <%var len = result.length%>
+<form class="form-inline" role="form" action="/checkdata">
+    <div class="form-group">
+    <input class="form-control" type="text" name="team" placeholder="球队名" value="<%-query.team%>"/>
+    </div>
+    <div class="form-group">
+    <select class="form-control" name="not_home" id="">
+        <option value="0" >主场</option>
+        <option value="1">客场</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="date" name="date" placeholder="日期" value="<%-query.date%>"/>
+    </div>
+    <button class="btn btn-default" type="submit">提交</button>
+</form>
 
-    <%for (var i=0; i<len; i++){%>
-        <p>
-            <%-result[i].name_0%> <%-result[i].score_0%> : <%-result[i].score_1%> <%-result[i].name_1%>
-        </p>
+<%var list = content.list || []%>
+<%if(list.length>0){%>
+
+<h3 class="alert alert-success"><span class="glyphicon glyphicon-fire"> 共<%-list.length%>场</span></h3>
+
+<table class="table">
+    <thead>
+    <tr class="danger">
+        <th class="col-md-2">日期</th>
+        <th class="col-md-2 text-right">主场</th>
+        <th class="col-md-2 text-right">比分</th>
+        <th class="col-md-1 text-center"> </th>
+        <th class="col-md-2 text-left">比分</th>
+        <th class="col-md-2 text-left">客场</th>
+        <th class="col-md-1">总分</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for(var i=0; i<list.length;i++){%>
+         <tr>
+             <td><%-list[i].date%></td>
+             <%var result = list[i].result%>
+             <%var len = result.length%>
+             <%for (var j=0; j<len; j++){%>
+                 <%if(result[j].is_show){%>
+                 <td class="text-right"><%-result[j].name_0%></td>
+                 <td class="text-primary text-right"><span class="lead"><%-result[j].score_0%></span></td>
+                <td class="text-center">:</td>
+                <td class="text-primary text-left"><span class="lead"><%-result[j].score_1%></span></td>
+                 <td class="text-left"><%-result[j].name_1%></td>
+                 <%var score_plus = parseInt(result[j].score_0,10)+parseInt(result[j].score_1,10)%>
+                 <td><%-score_plus%></td>
+                 <%}%>
+             <%}%>
+         </tr>
+
+
     <%}%>
-
+    </tbody>
+</table>
+<%}%>
 
 <%- include footer %>

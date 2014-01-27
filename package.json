@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "lottery-nba",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "express": "3.4.8",
-    "jade": "*",
 	"ejs": "*",
 	"mongodb": "*",
     "connect-mongo": "*",
-    "connect-flash": "*"
+    "connect-flash": "*",
+	"cheerio": "*",
+	"mongoose":"*",
+      "moment":"*"
   }
 }
