@@ -11,6 +11,7 @@ var path = require('path');
 var MongoStore = require("connect-mongo")(express);
 var settings = require("./settings");
 var flash = require('connect-flash');
+var fs = require('fs');
 
 var app = express();
 

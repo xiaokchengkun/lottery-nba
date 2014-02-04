@@ -1,71 +1,77 @@
-<%- include header %>
+<%- include public/header %>
 
 <%var query = content.query || {}%>
-
-<form class="form-inline" role="form" action="/checkdata">
-    <div class="form-group">
-    <input class="form-control" type="text" name="team" placeholder="球队名" value="<%-query.team%>"/>
-    </div>
-    <div class="form-group">
-    <select class="form-control" name="not_home" id="">
-        <%var options = [{"value":0,"text":"主场"},{"value":1,"text":"客场"}]%>
-        <%for(var i=0;i<options.length;i++){%>
-            <%var selected = ""%>
-            <%if(query.not_home == options[i].value){%>
-            <%selected = "selected"%>
+<div ng-controller = "checkNBAData">
+    <form class="form-inline" id="J_submit-form" role="form" action="/checkdata">
+        <div class="form-group">
+        <input class="form-control" type="text" name="team" placeholder="球队名" value="<%-query.team%>"/>
+        </div>
+        <div class="form-group">
+        <select class="form-control" name="not_home" id="">
+            <%var options = [{"value":0,"text":"主场"},{"value":1,"text":"客场"},{"value":-1,"text":"置空"}]%>
+            <%for(var i=0;i<options.length;i++){%>
+                <%var selected = ""%>
+                <%if(query.not_home == options[i].value){%>
+                <%selected = "selected"%>
+                <%}%>
+            <option value="<%-options[i].value%>" <%-selected%>><%-options[i].text%></option>
             <%}%>
-        <option value="<%-options[i].value%>" <%-selected%>><%-options[i].text%></option>
-        <%}%>
-        <!--<option value="0" '<%(parseInt(query.not_home,10)==0)?"selected=true":""%>'>主场</option>-->
-        <!--<option value="1" '<%(parseInt(query.not_home,10)==1)?"selected=true":""%>'>客场</option>-->
-    </select>
+        </select>
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="date" name="date" placeholder="日期" value="<%-query.date%>"/>
+        </div>
+        <button class="btn btn-default" type="submit">同步提交</button>
+        <a class="btn btn-default" id="J_ajax-submit">异步提交</a>
+    </form>
+    <div ng-repeat = "data in checkData">
+        {{data.date}} {{data.name_0}}
     </div>
-    <div class="form-group">
-    <input class="form-control" type="date" name="date" placeholder="日期" value="<%-query.date%>"/>
-    </div>
-    <button class="btn btn-default" type="submit">提交</button>
-</form>
+    <%var list = content.list || []%>
 
-<%var list = content.list || []%>
-<%if(list.length>0){%>
+    <%if(list.length>0){%>
+        <h3 class="alert alert-success">
+            <span class="glyphicon glyphicon-fire">
+                共<%-(list.length)%>场
+            </span>
+        </h3>
 
-<h3 class="alert alert-success"><span class="glyphicon glyphicon-fire"> 共<%-list.length%>场</span></h3>
+        <table class="table">
+            <thead>
+            <tr class="danger">
+                <th class="col-md-1">日期</th>
+                <th class="col-md-2 text-right">主场</th>
+                <th class="col-md-2 text-right">主分</th>
+                <th class="col-md-1 text-center"> </th>
+                <th class="col-md-2 text-left">客分</th>
+                <th class="col-md-2 text-left">客场</th>
+                <th class="col-md-1">总分</th>
+                <th class="col-md-1">分差</th>
+            </tr>
+            </thead>
+            <tbody>
 
-<table class="table">
-    <thead>
-    <tr class="danger">
-        <th class="col-md-2">日期</th>
-        <th class="col-md-2 text-right">主场</th>
-        <th class="col-md-2 text-right">比分</th>
-        <th class="col-md-1 text-center"> </th>
-        <th class="col-md-2 text-left">比分</th>
-        <th class="col-md-2 text-left">客场</th>
-        <th class="col-md-1">总分</th>
-    </tr>
-    </thead>
-    <tbody>
-    <%for(var i=0; i<list.length;i++){%>
-         <tr>
-             <td><%-list[i].date%></td>
-             <%var result = list[i].result%>
-             <%var len = result.length%>
-             <%for (var j=0; j<len; j++){%>
-                 <%if(result[j].is_show){%>
-                 <td class="text-right"><%-result[j].name_0%></td>
-                 <td class="text-primary text-right"><span class="lead"><%-result[j].score_0%></span></td>
-                <td class="text-center">:</td>
-                <td class="text-primary text-left"><span class="lead"><%-result[j].score_1%></span></td>
-                 <td class="text-left"><%-result[j].name_1%></td>
-                 <%var score_plus = parseInt(result[j].score_0,10)+parseInt(result[j].score_1,10)%>
-                 <td><%-score_plus%></td>
-                 <%}%>
-             <%}%>
-         </tr>
-
-
+            <%for(var i=0; i<list.length;i++){%>
+                 <tr>
+                     <td><%-list[i].date%></td>
+                     <%var result = list[i]%>
+                     <td class="text-right"><%-result.name_0%></td>
+                     <td class="text-primary text-right"><span class="lead"><%-result.score_0||"---"%></span></td>
+                    <td class="text-center"><span class="lead"><%-(result.score_0)?":":"VS"%></span></td>
+                    <td class="text-primary text-left"><span class="lead"><%-result.score_1||"---"%></span></td>
+                     <td class="text-left"><%-result.name_1%></td>
+                    <%var score_plus = parseInt(result.score_0,10)+parseInt(result.score_1,10)%>
+                    <%var score_minus = parseInt(result.score_0,10)-parseInt(result.score_1,10)%>
+                     <td><%-(isNaN(score_plus)?"------":score_plus)%></td>
+                     <td><%-(isNaN(score_minus)?"------":score_minus)%></td>
+                 </tr>
+            <%}%>
+            </tbody>
+        </table>
     <%}%>
-    </tbody>
-</table>
-<%}%>
+</div>
 
-<%- include footer %>
+
+<script src="/javascripts/checkdata.js"></script>
+<script src="/javascripts/controllers.js"></script>
+<%- include public/footer %>
