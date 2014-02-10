@@ -1,0 +1,52 @@
+<div ng-controller = "lotteryCheckController">
+    <form class="form-inline" id="J_submit-form" role="form">
+        <div class="form-group">
+            <input class="form-control" type="text" name="team" placeholder="球队名" value="{{ lotteryData.query.team }}" ng-model="lotteryData.query.team"/>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="nothome" ng-model="lotteryData.query.nothome">
+                <option ng-repeat="option in lotteryOptions" value="{{ option.value }}">{{ option.text }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="date" name="date" placeholder="日期" value="{{ lotteryData.query.date }}" ng-model="lotteryData.query.date"/>
+        </div>
+        <a class="btn btn-default" id="J_ajax-submit"
+           href="#/checkdata?team={{ lotteryData.query.team }}&nothome={{ lotteryData.query.nothome }}&date={{ lotteryData.query.date }}">提交</a>
+    </form>
+
+
+    <h3 class="alert alert-success">
+            <span class="glyphicon glyphicon-fire">
+                共{{ lotteryData.list.length }}场
+            </span>
+    </h3>
+
+    <table class="table">
+        <thead>
+        <tr class="danger">
+            <th class="col-md-1">日期</th>
+            <th class="col-md-2 text-right">主场</th>
+            <th class="col-md-2 text-right">主分</th>
+            <th class="col-md-1 text-center"> </th>
+            <th class="col-md-2 text-left">客分</th>
+            <th class="col-md-2 text-left">客场</th>
+            <th class="col-md-1">总分</th>
+            <th class="col-md-1">分差</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat = "result in lotteryData.list">
+            <td>{{ result.date }}</td>
+            <td class="text-right">{{ result.name_0 }}</td>
+            <td class="text-primary text-right"><span class="lead">{{ result.score_0||"---" }}</span></td>
+            <td class="text-center"><span class="lead">{{ (result.score_0)?":":"VS" }}</span></td>
+            <td class="text-primary text-left"><span class="lead">{{ result.score_1||"---" }}</span></td>
+            <td class="text-left">{{ result.name_1 }}</td>
+            <td>{{ parseInt(result.score_0,10) + parseInt(result.score_1,10) }}</td>
+            <td>{{ result.score_0 - result.score_1 }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

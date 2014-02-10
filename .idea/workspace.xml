@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a60fca84-49a9-4963-9949-9f1bc238b28c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/nba/checkNBAData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/nba/saveNBAData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/check.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/check.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/public/footer.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/public/header.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/register.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/checkdata.js" afterPath="$PROJECT_DIR$/public/javascripts/checkdata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/services.js" afterPath="$PROJECT_DIR$/public/javascripts/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a60fca84-49a9-4963-9949-9f1bc238b28c" name="Default" comment="" />
     <ignored path="lottery-nba.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
