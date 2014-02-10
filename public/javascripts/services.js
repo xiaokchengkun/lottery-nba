@@ -1,10 +1,13 @@
-var services = angular.module("lottery.services",[]);
+var lotteryServices = angular.module("lotteryServices",[
+    "ngResource"
+]);
 
-services.factory("lotteryData",["$route", "$http", function($route, $http){
+lotteryServices.factory("lotteryGetData",["$resource", "$route", function($resource, $route){
     var url = "/ajax/checkdata";
     var data = {};
     var location = $route.current.params;
     console.log(location);
-
-    //$http.get();
+    return $resource("/ajax/checkdata", {}, {
+        query: {method:'POST', isArray:false}
+    });
 }]);

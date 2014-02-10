@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60fca84-49a9-4963-9949-9f1bc238b28c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/data/ajax.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/check.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/checkdata.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/data/saveData.ejs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/nba.ejs" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/footer.ejs" afterPath="$PROJECT_DIR$/views/public/footer.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/header.ejs" afterPath="$PROJECT_DIR$/views/public/header.ejs" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/nba/checkNBAData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/nba/saveNBAData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/check.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/check.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/public/footer.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/public/header.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/register.ejs" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/check.ejs" afterPath="$PROJECT_DIR$/views/check.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/nba/checkNBAData.js" afterPath="$PROJECT_DIR$/models/nba/checkNBAData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/checkdata.js" afterPath="$PROJECT_DIR$/public/javascripts/checkdata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/nba/saveNBAData.js" afterPath="$PROJECT_DIR$/models/nba/saveNBAData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/services.js" afterPath="$PROJECT_DIR$/public/javascripts/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lottery-nba.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,55 +40,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="check.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/check.ejs">
+      <file leaf-file-name="dataSaveDao.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daos/dataSaveDao.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="3141" selection-end="3141" vertical-scroll-proportion="-18.133333" vertical-offset="1256" max-vertical-offset="2050">
+            <state line="26" column="14" selection-start="743" selection-end="743" vertical-scroll-proportion="-10.196428" vertical-offset="79" max-vertical-offset="800">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkdata.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/checkdata.js">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.60679615" vertical-offset="0" max-vertical-offset="824">
+            <state line="10" column="33" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5274262" vertical-offset="0" max-vertical-offset="474">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/public/header.ejs">
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/public/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="51" selection-start="359" selection-end="359" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="700">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/public/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1475">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.5333333" vertical-offset="226" max-vertical-offset="700">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <file leaf-file-name="dataGetModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/lottery/dataGetModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="22" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1475">
+            <state line="12" column="53" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1025">
+              <folding>
+                <element signature="e#800#958#0" expanded="false" />
+                <element signature="e#991#1878#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataSaveModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/lottery/dataSaveModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="28" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="3025">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/controllers.js">
+      <file leaf-file-name="dataGetDao.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daos/dataGetDao.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+            <state line="23" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="-7.4074073" vertical-offset="375" max-vertical-offset="1175">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/db.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="275">
               <folding />
             </state>
           </provider>
@@ -93,8 +118,12 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <folding />
+            <state line="10" column="45" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <folding>
+                <marker date="1391704570000" expanded="true" signature="120:396" placeholder="[...]" />
+                <marker date="1391704570000" expanded="true" signature="171:395" placeholder="{...}" />
+                <marker date="1391704570000" expanded="true" signature="338:391" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,20 +145,29 @@
         <option value="$PROJECT_DIR$/views/footer.ejs" />
         <option value="$PROJECT_DIR$/views/header.ejs" />
         <option value="$PROJECT_DIR$/views/data/ajax.ejs" />
-        <option value="$PROJECT_DIR$/routes/check.js" />
         <option value="$PROJECT_DIR$/views/nba.ejs" />
         <option value="$PROJECT_DIR$/views/data/saveData.ejs" />
         <option value="$PROJECT_DIR$/models/nba/saveNBAData.js" />
-        <option value="$PROJECT_DIR$/models/nba/checkNBAData.js" />
         <option value="$PROJECT_DIR$/public/javascripts/controller.js" />
-        <option value="$PROJECT_DIR$/views/public/header.ejs" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/index.html" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/controllers.js" />
         <option value="$PROJECT_DIR$/views/check.ejs" />
-        <option value="$PROJECT_DIR$/public/javascripts/services.js" />
+        <option value="$PROJECT_DIR$/views/lottery/check.html" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/views/lottery/index.html" />
+        <option value="$PROJECT_DIR$/public/lottery/index.html" />
         <option value="$PROJECT_DIR$/public/javascripts/checkdata.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/services.js" />
+        <option value="$PROJECT_DIR$/models/nba/checkNBAData.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/controllers.js" />
+        <option value="$PROJECT_DIR$/routes/check.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/models/lottery/dataGetModel.js" />
+        <option value="$PROJECT_DIR$/daos/dataGetDao.js" />
+        <option value="$PROJECT_DIR$/public/lottery/check.html" />
+        <option value="$PROJECT_DIR$/models/lottery/dataSaveModel.js" />
+        <option value="$PROJECT_DIR$/daos/dataSaveDao.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/public/header.ejs" />
+        <option value="$PROJECT_DIR$/views/index.html" />
       </list>
     </option>
   </component>
@@ -256,7 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="lottery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,7 +326,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nba" />
+              <option name="myItemId" value="lottery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lottery-nba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lottery-nba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,7 +357,12 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/public/lottery" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/lottery" />
       <recent name="$PROJECT_DIR$/views/data" />
       <recent name="$PROJECT_DIR$/views/public" />
     </key>
@@ -342,9 +399,10 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17569445" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24498567" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37864077" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -369,17 +427,37 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/check.ejs">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="16" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
+        <state line="24" column="27" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1475">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/public/header.ejs">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="700">
+        <state line="13" column="22" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1525">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="500">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="375">
+          <folding>
+            <marker date="1391704570000" expanded="true" signature="120:396" placeholder="[...]" />
+            <marker date="1391704570000" expanded="true" signature="171:395" placeholder="{...}" />
+            <marker date="1391704570000" expanded="true" signature="338:391" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -393,7 +471,9 @@
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="22" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1525">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -407,24 +487,11 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/nba/checkNBAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0" vertical-offset="1142" max-vertical-offset="2375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="350" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/check.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="37" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1400">
-          <folding />
+          <folding>
+            <marker date="1391704570000" expanded="true" signature="120:396" placeholder="[...]" />
+            <marker date="1391704570000" expanded="true" signature="171:395" placeholder="{...}" />
+            <marker date="1391704570000" expanded="true" signature="338:391" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -436,40 +503,27 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/checkdata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="34" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="625">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="49" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/nba/saveNBAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="2975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/nba/checkNBAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="50" selection-start="1406" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="1300" max-vertical-offset="2400" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/check.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="45" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2075">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/checkdata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="32" selection-start="539" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="625">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -478,15 +532,12 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/public/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="675" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="26" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="1573" max-vertical-offset="2400">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,21 +571,6 @@
         <state line="15" column="17" selection-start="292" selection-end="292" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="600" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/public/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="33" selection-end="33" vertical-scroll-proportion="0.10040161" vertical-offset="0" max-vertical-offset="747" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/check.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="476" selection-end="482" vertical-scroll-proportion="0.4993758" vertical-offset="0" max-vertical-offset="801" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/data/saveData.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="250" />
@@ -545,68 +581,116 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="771" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/nba/saveNBAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="2975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/nba/checkNBAData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.3220974" vertical-offset="1142" max-vertical-offset="2375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="90" selection-end="90" vertical-scroll-proportion="0.25188917" vertical-offset="0" max-vertical-offset="794" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/check.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3141" selection-end="3141" vertical-scroll-proportion="-18.133333" vertical-offset="1256" max-vertical-offset="2050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
+        <state line="10" column="45" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding>
+            <marker date="1391704570000" expanded="true" signature="120:396" placeholder="[...]" />
+            <marker date="1391704570000" expanded="true" signature="171:395" placeholder="{...}" />
+            <marker date="1391704570000" expanded="true" signature="338:391" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/public/lottery/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="1475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/public/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="359" selection-end="359" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="700">
+        <state line="4" column="8" selection-start="125" selection-end="125" vertical-scroll-proportion="0.21097046" vertical-offset="0" max-vertical-offset="474">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/checkdata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.60679615" vertical-offset="0" max-vertical-offset="824">
+        <state line="35" column="32" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="1200">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="30" selection-start="456" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lottery/check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="48" selection-start="2245" selection-end="2245" vertical-scroll-proportion="-4.9651165" vertical-offset="723" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/lottery/dataGetModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1025">
+          <folding>
+            <element signature="e#800#958#0" expanded="false" />
+            <element signature="e#991#1878#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daos/dataGetDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="20" selection-start="575" selection-end="575" vertical-scroll-proportion="-7.4074073" vertical-offset="375" max-vertical-offset="1175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/lottery/dataSaveModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="28" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="3025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="1525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daos/dataSaveDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="14" selection-start="743" selection-end="743" vertical-scroll-proportion="-10.196428" vertical-offset="79" max-vertical-offset="800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/public/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.5333333" vertical-offset="226" max-vertical-offset="700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="33" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5274262" vertical-offset="0" max-vertical-offset="474">
           <folding />
         </state>
       </provider>

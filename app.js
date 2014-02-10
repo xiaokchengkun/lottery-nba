@@ -4,8 +4,8 @@
  */
 
 var express = require('express');
+var ejs = require("ejs");
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var MongoStore = require("connect-mongo")(express);
@@ -18,7 +18,9 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
+app.engine('.html', ejs.__express);
+app.set('view engine', 'html');
 
 app.use(flash());
 
